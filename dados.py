@@ -61,7 +61,7 @@ if __name__ == "__main__":
     benchmark_for_simd = {}
     benchmark_taskloop_simd = {}
 
-    tamanho_dataset = 'MINI_DATASET'
+    tamanho_dataset = 'LARGE_DATASET'
     nome_arquivo_csv = 'resultados.csv'
 
     # Esta área corresponde aos códigos executados no segundo projeto
@@ -72,32 +72,32 @@ if __name__ == "__main__":
     subprocess.call(comando_sequencial.split())
 
     print('[PD360] Compilando o código taskloop...')
-    comando_taskloop = 'gcc -I utilities -I linear-algebra/kernels/mvt utilities/polybench.c -fopenmp linear-algebra/kernels/mvt/mvt_taskloop.c -DPOLYBENCH_TIME -D%s -o mvt_taskloop -O0' % (
+    comando_taskloop = 'gcc -I utilities -I linear-algebra/kernels/mvt utilities/polybench.c -fopenmp -fdump-tree-ompexp-graph linear-algebra/kernels/mvt/mvt_taskloop.c -DPOLYBENCH_TIME -D%s -o mvt_taskloop -O0' % (
         tamanho_dataset)
     print(comando_taskloop)
     subprocess.call(comando_taskloop.split())
 
     print('[PD360] Compilando o código parallel for...')
-    comando_for = 'gcc -I utilities -I linear-algebra/kernels/mvt utilities/polybench.c -fopenmp linear-algebra/kernels/mvt/mvt_for.c -DPOLYBENCH_TIME -D%s -o mvt_for -O0' % (
+    comando_for = 'gcc -I utilities -I linear-algebra/kernels/mvt utilities/polybench.c -fopenmp -fdump-tree-ompexp-graph linear-algebra/kernels/mvt/mvt_for.c -DPOLYBENCH_TIME -D%s -o mvt_for -O0' % (
         tamanho_dataset)
     print(comando_for)
     subprocess.call(comando_for.split())
 
     # Esta área corresponde aos códigos executados no terceiro projeto
     print('[PD360] Compilando o código sequencial + simd...')
-    comando_sequencial_simd = 'gcc -I utilities -I linear-algebra/kernels/mvt utilities/polybench.c linear-algebra/kernels/mvt/mvt_simd.c -DPOLYBENCH_TIME -D%s -o mvt_sequencial_simd -O0' % (
+    comando_sequencial_simd = 'gcc -I utilities -I linear-algebra/kernels/mvt utilities/polybench.c -fopenmp -fdump-tree-ompexp-graph linear-algebra/kernels/mvt/mvt_simd.c -DPOLYBENCH_TIME -D%s -o mvt_sequencial_simd -O0' % (
         tamanho_dataset)
     print(comando_sequencial_simd)
     subprocess.call(comando_sequencial_simd.split())
 
     print('[PD360] Compilando o código parallel for + simd...')
-    comando_for_simd = 'gcc -I utilities -I linear-algebra/kernels/mvt utilities/polybench.c -fopenmp linear-algebra/kernels/mvt/mvt_for_simd.c -DPOLYBENCH_TIME -D%s -o mvt_for_simd -O0' % (
+    comando_for_simd = 'gcc -I utilities -I linear-algebra/kernels/mvt utilities/polybench.c -fopenmp -fdump-tree-ompexp-graph linear-algebra/kernels/mvt/mvt_for_simd.c -DPOLYBENCH_TIME -D%s -o mvt_for_simd -O0' % (
         tamanho_dataset)
     print(comando_for_simd)
     subprocess.call(comando_for_simd.split())
 
     print('[PD360] Compilando o código taskloop + simd...')
-    comando_taskloop_simd = 'gcc -I utilities -I linear-algebra/kernels/mvt utilities/polybench.c -fopenmp linear-algebra/kernels/mvt/mvt_taskloop_simd.c -DPOLYBENCH_TIME -D%s -o mvt_taskloop_simd -O0' % (
+    comando_taskloop_simd = 'gcc -I utilities -I linear-algebra/kernels/mvt utilities/polybench.c -fopenmp -fdump-tree-ompexp-graph linear-algebra/kernels/mvt/mvt_taskloop_simd.c -DPOLYBENCH_TIME -D%s -o mvt_taskloop_simd -O0' % (
         tamanho_dataset)
     print(comando_taskloop_simd)
     subprocess.call(comando_taskloop_simd.split())

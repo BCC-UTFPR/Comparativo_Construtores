@@ -1,0 +1,231 @@
+
+;; Function rtclock (rtclock, funcdef_no=2, decl_uid=5022, cgraph_uid=2, symbol_order=8)
+
+rtclock ()
+{
+  int stat;
+  struct timeval Tp;
+  double D.5060;
+  double D.5059;
+  long int D.5058;
+  double D.5057;
+  long int D.5056;
+  double D.5055;
+
+  <bb 2>:
+  stat = gettimeofday (&Tp, 0B);
+  if (stat != 0)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  printf ("Error return from gettimeofday: %d", stat);
+
+  <bb 4>:
+  D.5056 = Tp.tv_sec;
+  D.5057 = (double) D.5056;
+  D.5058 = Tp.tv_usec;
+  D.5059 = (double) D.5058;
+  D.5060 = D.5059 * 9.99999999999999954748111825886258685613938723690807819366e-7;
+  D.5055 = D.5057 + D.5060;
+  Tp = {CLOBBER};
+
+<L3>:
+  return D.5055;
+
+}
+
+
+
+;; Function polybench_flush_cache (polybench_flush_cache, funcdef_no=3, decl_uid=5026, cgraph_uid=3, symbol_order=9)
+
+
+OMP region tree
+
+bb 2: gimple_omp_parallel
+    bb 3: gimple_omp_for
+    bb 4: GIMPLE_OMP_CONTINUE
+    bb 5: GIMPLE_OMP_RETURN
+bb 6: GIMPLE_OMP_RETURN
+
+Introduced new external node (__builtin_omp_get_num_threads/19).
+Introduced new external node (__builtin_omp_get_thread_num/20).
+Merging blocks 2 and 14
+Merging blocks 2 and 7
+polybench_flush_cache ()
+{
+  int D.5093;
+  int D.5091;
+  int D.5092;
+  int tt.3;
+  int q.2;
+  int D.5088;
+  int D.5087;
+  int i;
+  int D.5085;
+  static const char __PRETTY_FUNCTION__[22] = "polybench_flush_cache";
+  double tmp;
+  int i;
+  double * flush;
+  int cs;
+  long unsigned int D.5063;
+  struct .omp_data_s.0 .omp_data_o.1;
+  double D.5083;
+  double D.5084;
+  double * D.5082;
+
+  <bb 2>:
+  cs = 4194560;
+  D.5063 = (long unsigned int) cs;
+  flush = calloc (D.5063, 8);
+  tmp = 0.0;
+  .omp_data_o.1.flush = flush;
+  .omp_data_o.1.tmp = tmp;
+  .omp_data_o.1.cs = cs;
+  __builtin_GOMP_parallel (polybench_flush_cache._omp_fn.0, &.omp_data_o.1, 0, 0);
+  flush = .omp_data_o.1.flush;
+  tmp = .omp_data_o.1.tmp;
+  cs = .omp_data_o.1.cs;
+  .omp_data_o.1 = {CLOBBER};
+  if (tmp <= 1.0e+1)
+    goto <bb 4>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  __assert_fail ("tmp <= 10.0", "utilities/polybench.c", 96, &__PRETTY_FUNCTION__);
+
+  <bb 4>:
+  free (flush);
+  return;
+
+}
+
+
+
+;; Function polybench_prepare_instruments (polybench_prepare_instruments, funcdef_no=4, decl_uid=5033, cgraph_uid=4, symbol_order=10)
+
+polybench_prepare_instruments ()
+{
+  <bb 2>:
+  polybench_flush_cache ();
+  return;
+
+}
+
+
+
+;; Function polybench_timer_start (polybench_timer_start, funcdef_no=5, decl_uid=5035, cgraph_uid=5, symbol_order=11)
+
+polybench_timer_start ()
+{
+  double polybench_t_start.4;
+
+  <bb 2>:
+  polybench_prepare_instruments ();
+  polybench_t_start.4 = rtclock ();
+  polybench_t_start = polybench_t_start.4;
+  return;
+
+}
+
+
+
+;; Function polybench_timer_stop (polybench_timer_stop, funcdef_no=6, decl_uid=5037, cgraph_uid=6, symbol_order=12)
+
+polybench_timer_stop ()
+{
+  double polybench_t_end.5;
+
+  <bb 2>:
+  polybench_t_end.5 = rtclock ();
+  polybench_t_end = polybench_t_end.5;
+  return;
+
+}
+
+
+
+;; Function polybench_timer_print (polybench_timer_print, funcdef_no=7, decl_uid=5039, cgraph_uid=7, symbol_order=13)
+
+polybench_timer_print ()
+{
+  double D.5117;
+  double polybench_t_start.7;
+  double polybench_t_end.6;
+
+  <bb 2>:
+  polybench_t_end.6 = polybench_t_end;
+  polybench_t_start.7 = polybench_t_start;
+  D.5117 = polybench_t_end.6 - polybench_t_start.7;
+  printf ("%0.6f\n", D.5117);
+  return;
+
+}
+
+
+
+;; Function xmalloc (xmalloc, funcdef_no=8, decl_uid=5042, cgraph_uid=8, symbol_order=14)
+
+xmalloc (size_t num)
+{
+  int ret;
+  void * new;
+  void * D.5123;
+  struct _IO_FILE * stderr.9;
+  void * new.8;
+
+  <bb 2>:
+  new = 0B;
+  ret = posix_memalign (&new, 32, num);
+  new.8 = new;
+  if (new.8 == 0B)
+    goto <bb 4>;
+  else
+    goto <bb 3>;
+
+  <bb 3>:
+  if (ret != 0)
+    goto <bb 4>;
+  else
+    goto <bb 5>;
+
+  <bb 4>:
+  stderr.9 = stderr;
+  __builtin_fwrite ("[PolyBench] posix_memalign: cannot allocate memory", 1, 50, stderr.9);
+  exit (1);
+
+  <bb 5>:
+  D.5123 = new;
+  new = {CLOBBER};
+
+<L4>:
+  return D.5123;
+
+}
+
+
+
+;; Function polybench_alloc_data (polybench_alloc_data, funcdef_no=9, decl_uid=5048, cgraph_uid=9, symbol_order=15)
+
+polybench_alloc_data (long long unsigned int n, int elt_size)
+{
+  void * ret;
+  size_t val;
+  void * D.5127;
+  long unsigned int D.5126;
+
+  <bb 2>:
+  val = n;
+  D.5126 = (long unsigned int) elt_size;
+  val = D.5126 * val;
+  ret = xmalloc (val);
+  D.5127 = ret;
+
+<L0>:
+  return D.5127;
+
+}
+
+

@@ -5,7 +5,7 @@ library(ggplot2)
 # xdot, dot -tpdf
 
 # Leitura do arquivo com os dados
-setwd("/home/todos/alunos/cm/a1552309/Documentos/OMP-Constructors")
+setwd("/home/fronchetti/Documentos/OMP-Constructors")
 dados <- read.csv(file="resultados.csv", header=TRUE, sep=",")
 
 # Quantidade de threads usadas
@@ -25,8 +25,7 @@ ggplot(dados, aes(fill=tipo, y=media, x=factor(num_threads))) +
                       labels=c("Sequencial", "Sequencial (SIMD)", "For", "For (SIMD)", "Taskloop", "Taskloop (SIMD)"),
                       name="") + theme(legend.position="top")
 
-# Seleciona colunas de tentativas
-duas_threads_tentativas <- duas_threads[ , grepl("tentativa_",names(duas_threads))]
-quatro_threads_tentativas <- quatro_threads[ , grepl("tentativa_",names(quatro_threads))]
-oito_threads_tentativas <- oito_threads[ , grepl("tentativa_",names(oito_threads))]
-dezesseis_threads_tentativas <- dezesseis_threads[ , grepl("tentativa_",names(dezesseis_threads))]
+library(reshape2)
+dados_formatados <- melt(dezesseis_threads, id.vars = "tipo", measure.vars=c("tentativa_0", "tentativa_1", "tentativa_2", "tentativa_3", "tentativa_4", "tentativa_5", "tentativa_6", "tentativa_7", "tentativa_8", "tentativa_9"))
+ggplot(dados_formatados, aes(x = variable, y = value, fill = tipo), outlines = FALSE) +
+  geom_boxplot()

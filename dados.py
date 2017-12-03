@@ -64,7 +64,6 @@ if __name__ == "__main__":
     tamanho_dataset = 'LARGE_DATASET'
     nome_arquivo_csv = 'resultados.csv'
 
-    # Esta área corresponde aos códigos executados no segundo projeto
     print('[PD360] Compilando o código sequencial...')
     comando_sequencial = 'gcc -I utilities -I linear-algebra/kernels/mvt utilities/polybench.c linear-algebra/kernels/mvt/mvt.c -DPOLYBENCH_TIME -D%s -o mvt_sequencial -O0' % (
         tamanho_dataset)
@@ -83,7 +82,6 @@ if __name__ == "__main__":
     print(comando_for)
     subprocess.call(comando_for.split())
 
-    # Esta área corresponde aos códigos executados no terceiro projeto
     print('[PD360] Compilando o código sequencial + simd...')
     comando_sequencial_simd = 'gcc -I utilities -I linear-algebra/kernels/mvt utilities/polybench.c -fopenmp -fdump-tree-ompexp-graph linear-algebra/kernels/mvt/mvt_simd.c -DPOLYBENCH_TIME -D%s -o mvt_sequencial_simd -O0' % (
         tamanho_dataset)

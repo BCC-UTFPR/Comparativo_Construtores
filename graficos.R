@@ -29,3 +29,31 @@ library(reshape2)
 dados_formatados <- melt(dezesseis_threads, id.vars = "tipo", measure.vars=c("tentativa_0", "tentativa_1", "tentativa_2", "tentativa_3", "tentativa_4", "tentativa_5", "tentativa_6", "tentativa_7", "tentativa_8", "tentativa_9"))
 ggplot(dados_formatados, aes(x = variable, y = value, fill = tipo), outlines = FALSE) +
   geom_boxplot()
+
+# Seleciona colunas de tentativas
+duas_threads_tentativas <- duas_threads[ , grepl("tentativa_",names(duas_threads))]
+duas_threads_tentativas_final <- stack(as.data.frame(t(duas_threads_tentativas)))
+quatro_threads_tentativas <- quatro_threads[ , grepl("tentativa_",names(quatro_threads))]
+quatro_threads_tentativas_final <- stack(as.data.frame(t(quatro_threads_tentativas)))
+oito_threads_tentativas <- oito_threads[ , grepl("tentativa_",names(oito_threads))]
+oito_threads_tentativas_final <- stack(as.data.frame(t(oito_threads_tentativas)))
+dezesseis_threads_tentativas <- dezesseis_threads[ , grepl("tentativa_",names(dezesseis_threads))]
+dezesseis_threads_tentativas_final <- stack(as.data.frame(t(dezesseis_threads_tentativas)))
+
+ggplot(duas_threads_tentativas_final) +
+  geom_boxplot(aes(x = ind, y = values)) + scale_x_discrete(name = "Construtores", labels = c("Sequencial", "For", "Taskloop", "Sequencial (SIMD)", "For (SIMD)", "Taskloop (SIMD)")) +
+  scale_y_continuous(name = "Tempo de execução (ms)") + ggtitle("Número de threads: 2")  + theme(plot.title = element_text(size = 14, family = "Tahoma", face = "bold"), text = element_text(size=16, color = "black"))
+
+ggplot(quatro_threads_tentativas_final) +
+  geom_boxplot(aes(x = ind, y = values)) + scale_x_discrete(name = "Construtores", labels = c("Sequencial", "For", "Taskloop", "Sequencial (SIMD)", "For (SIMD)", "Taskloop (SIMD)")) +
+  scale_y_continuous(name = "Tempo de execução (ms)") + ggtitle("Número de threads: 4")  + theme(plot.title = element_text(size = 14, family = "Tahoma", face = "bold"), text = element_text(size=16, color = "black"))
+
+ggplot(oito_threads_tentativas_final) +
+  geom_boxplot(aes(x = ind, y = values)) + scale_x_discrete(name = "Construtores", labels = c("Sequencial", "For", "Taskloop", "Sequencial (SIMD)", "For (SIMD)", "Taskloop (SIMD)")) +
+  scale_y_continuous(name = "Tempo de execução (ms)") + ggtitle("Número de threads: 8")  + theme(plot.title = element_text(size = 14, family = "Tahoma", face = "bold"), text = element_text(size=16, color = "black"))
+
+ggplot(dezesseis_threads_tentativas_final) +
+  geom_boxplot(aes(x = ind, y = values)) + scale_x_discrete(name = "Construtores", labels = c("Sequencial", "For", "Taskloop", "Sequencial (SIMD)", "For (SIMD)", "Taskloop (SIMD)")) +
+  scale_y_continuous(name = "Tempo de execução (ms)") + ggtitle("Número de threads: 16")  + theme(plot.title = element_text(size = 14, family = "Tahoma", face = "bold"), text = element_text(size=16, color = "black"))
+
+

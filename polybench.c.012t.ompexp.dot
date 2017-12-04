@@ -21,18 +21,18 @@ else\l\
 }"];
 
 	fn_2_basic_block_4 [shape=record,style=filled,fillcolor=lightgrey,label="{ FREQ:0 |\<bb\ 4\>:\l\
-|D.5056\ =\ Tp.tv_sec;\l\
-|D.5057\ =\ (double)\ D.5056;\l\
-|D.5058\ =\ Tp.tv_usec;\l\
-|D.5059\ =\ (double)\ D.5058;\l\
-|D.5060\ =\ D.5059\ *\ 9.99999999999999954748111825886258685613938723690807819366e-7;\l\
-|D.5055\ =\ D.5057\ +\ D.5060;\l\
+|D.5129\ =\ Tp.tv_sec;\l\
+|D.5130\ =\ (double)\ D.5129;\l\
+|D.5131\ =\ Tp.tv_usec;\l\
+|D.5132\ =\ (double)\ D.5131;\l\
+|D.5133\ =\ D.5132\ *\ 9.99999999999999954748111825886258685613938723690807819366e-7;\l\
+|D.5128\ =\ D.5130\ +\ D.5133;\l\
 |Tp\ =\ \{CLOBBER\};\l\
 }"];
 
 	fn_2_basic_block_5 [shape=record,style=filled,fillcolor=lightgrey,label="{ FREQ:0 |\<bb\ 5\>:\l\
 |\<L3\>:\l\
-|return\ D.5055;\l\
+|return\ D.5128;\l\
 }"];
 
 	fn_2_basic_block_0:s -> fn_2_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true, label="[0%]"];
@@ -53,17 +53,15 @@ subgraph "cluster_polybench_flush_cache" {
 
 	fn_3_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{ FREQ:0 |\<bb\ 2\>:\l\
 |cs\ =\ 4194560;\l\
-|D.5063\ =\ (long\ unsigned\ int)\ cs;\l\
-|flush\ =\ calloc\ (D.5063,\ 8);\l\
+|D.5136\ =\ (long\ unsigned\ int)\ cs;\l\
+|flush\ =\ calloc\ (D.5136,\ 8);\l\
 |tmp\ =\ 0.0;\l\
-|.omp_data_o.1.flush\ =\ flush;\l\
-|.omp_data_o.1.tmp\ =\ tmp;\l\
-|.omp_data_o.1.cs\ =\ cs;\l\
-|__builtin_GOMP_parallel\ (polybench_flush_cache._omp_fn.0,\ &.omp_data_o.1,\ 0,\ 0);\l\
-|flush\ =\ .omp_data_o.1.flush;\l\
-|tmp\ =\ .omp_data_o.1.tmp;\l\
-|cs\ =\ .omp_data_o.1.cs;\l\
-|.omp_data_o.1\ =\ \{CLOBBER\};\l\
+|.omp_data_o.2.flush\ =\ flush;\l\
+|.omp_data_o.2.cs\ =\ cs;\l\
+|.omp_data_o.2.tmp\ =\ tmp;\l\
+|__builtin_GOMP_parallel\ (polybench_flush_cache._omp_fn.0,\ &.omp_data_o.2,\ 0,\ 0);\l\
+|tmp\ =\ .omp_data_o.2.tmp;\l\
+|.omp_data_o.2\ =\ \{CLOBBER\};\l\
 |if\ (tmp\ \<=\ 1.0e+1)\l\
 \ \ goto\ \<bb\ 4\>;\l\
 else\l\
@@ -112,8 +110,8 @@ subgraph "cluster_polybench_timer_start" {
 
 	fn_5_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{ FREQ:0 |\<bb\ 2\>:\l\
 |polybench_prepare_instruments\ ();\l\
-|polybench_t_start.4\ =\ rtclock\ ();\l\
-|polybench_t_start\ =\ polybench_t_start.4;\l\
+|D.5184\ =\ rtclock\ ();\l\
+|polybench_t_start\ =\ D.5184;\l\
 |return;\l\
 }"];
 
@@ -130,8 +128,8 @@ subgraph "cluster_polybench_timer_stop" {
 	fn_6_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
 
 	fn_6_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{ FREQ:0 |\<bb\ 2\>:\l\
-|polybench_t_end.5\ =\ rtclock\ ();\l\
-|polybench_t_end\ =\ polybench_t_end.5;\l\
+|D.5185\ =\ rtclock\ ();\l\
+|polybench_t_end\ =\ D.5185;\l\
 |return;\l\
 }"];
 
@@ -148,10 +146,10 @@ subgraph "cluster_polybench_timer_print" {
 	fn_7_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
 
 	fn_7_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{ FREQ:0 |\<bb\ 2\>:\l\
-|polybench_t_end.6\ =\ polybench_t_end;\l\
-|polybench_t_start.7\ =\ polybench_t_start;\l\
-|D.5117\ =\ polybench_t_end.6\ -\ polybench_t_start.7;\l\
-|printf\ (\"%0.6f\n\",\ D.5117);\l\
+|polybench_t_end.5\ =\ polybench_t_end;\l\
+|polybench_t_start.6\ =\ polybench_t_start;\l\
+|D.5188\ =\ polybench_t_end.5\ -\ polybench_t_start.6;\l\
+|printf\ (\"%0.6f\n\",\ D.5188);\l\
 |return;\l\
 }"];
 
@@ -170,8 +168,8 @@ subgraph "cluster_xmalloc" {
 	fn_8_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{ FREQ:0 |\<bb\ 2\>:\l\
 |new\ =\ 0B;\l\
 |ret\ =\ posix_memalign\ (&new,\ 32,\ num);\l\
-|new.8\ =\ new;\l\
-|if\ (new.8\ ==\ 0B)\l\
+|new.7\ =\ new;\l\
+|if\ (new.7\ ==\ 0B)\l\
 \ \ goto\ \<bb\ 4\>;\l\
 else\l\
 \ \ goto\ \<bb\ 3\>;\l\
@@ -185,19 +183,19 @@ else\l\
 }"];
 
 	fn_8_basic_block_4 [shape=record,style=filled,fillcolor=lightgrey,label="{ FREQ:0 |\<bb\ 4\>:\l\
-|stderr.9\ =\ stderr;\l\
-|__builtin_fwrite\ (\"[PolyBench]\ posix_memalign:\ cannot\ allocate\ memory\",\ 1,\ 50,\ stderr.9);\l\
+|stderr.8\ =\ stderr;\l\
+|__builtin_fwrite\ (\"[PolyBench]\ posix_memalign:\ cannot\ allocate\ memory\",\ 1,\ 50,\ stderr.8);\l\
 |exit\ (1);\l\
 }"];
 
 	fn_8_basic_block_5 [shape=record,style=filled,fillcolor=lightgrey,label="{ FREQ:0 |\<bb\ 5\>:\l\
-|D.5123\ =\ new;\l\
+|D.5194\ =\ new;\l\
 |new\ =\ \{CLOBBER\};\l\
 }"];
 
 	fn_8_basic_block_6 [shape=record,style=filled,fillcolor=lightgrey,label="{ FREQ:0 |\<bb\ 6\>:\l\
 |\<L4\>:\l\
-|return\ D.5123;\l\
+|return\ D.5194;\l\
 }"];
 
 	fn_8_basic_block_0:s -> fn_8_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true, label="[0%]"];
@@ -219,15 +217,15 @@ subgraph "cluster_polybench_alloc_data" {
 
 	fn_9_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{ FREQ:0 |\<bb\ 2\>:\l\
 |val\ =\ n;\l\
-|D.5126\ =\ (long\ unsigned\ int)\ elt_size;\l\
-|val\ =\ D.5126\ *\ val;\l\
+|D.5197\ =\ (long\ unsigned\ int)\ elt_size;\l\
+|val\ =\ D.5197\ *\ val;\l\
 |ret\ =\ xmalloc\ (val);\l\
-|D.5127\ =\ ret;\l\
+|D.5198\ =\ ret;\l\
 }"];
 
 	fn_9_basic_block_3 [shape=record,style=filled,fillcolor=lightgrey,label="{ FREQ:0 |\<bb\ 3\>:\l\
 |\<L0\>:\l\
-|return\ D.5127;\l\
+|return\ D.5198;\l\
 }"];
 
 	fn_9_basic_block_0:s -> fn_9_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true, label="[0%]"];

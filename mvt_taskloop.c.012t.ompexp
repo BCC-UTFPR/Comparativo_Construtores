@@ -1,93 +1,93 @@
 
-;; Function init_array (init_array, funcdef_no=2, decl_uid=4727, cgraph_uid=2, symbol_order=4)
+;; Function init_array (init_array, funcdef_no=2, decl_uid=4800, cgraph_uid=2, symbol_order=4)
 
 init_array (int n, double * x1, double * x2, double * y_1, double * y_2, double[8000] * A)
 {
   int j;
   int i;
-  double D.4813;
-  double D.4812;
-  double D.4811;
-  double D.4810;
-  double[8000] * D.4809;
-  long unsigned int D.4808;
-  long unsigned int D.4807;
-  double D.4806;
-  double D.4805;
-  double D.4804;
-  double D.4803;
-  double * D.4802;
-  long unsigned int D.4801;
-  long unsigned int D.4800;
-  double D.4799;
-  double D.4798;
-  double D.4797;
-  double D.4796;
-  double * D.4795;
-  long unsigned int D.4794;
-  long unsigned int D.4793;
-  double D.4792;
-  double D.4791;
-  double D.4790;
-  double D.4789;
-  double * D.4788;
-  long unsigned int D.4787;
-  long unsigned int D.4786;
-  double D.4785;
-  double D.4784;
-  double D.4783;
-  double * D.4782;
-  long unsigned int D.4781;
-  long unsigned int D.4780;
+  double D.4880;
+  double D.4879;
+  double D.4878;
+  double D.4877;
+  double[8000] * D.4876;
+  long unsigned int D.4875;
+  long unsigned int D.4874;
+  double D.4873;
+  double D.4872;
+  double D.4871;
+  double D.4870;
+  double * D.4869;
+  long unsigned int D.4868;
+  long unsigned int D.4867;
+  double D.4866;
+  double D.4865;
+  double D.4864;
+  double D.4863;
+  double * D.4862;
+  long unsigned int D.4861;
+  long unsigned int D.4860;
+  double D.4859;
+  double D.4858;
+  double D.4857;
+  double D.4856;
+  double * D.4855;
+  long unsigned int D.4854;
+  long unsigned int D.4853;
+  double D.4852;
+  double D.4851;
+  double D.4850;
+  double * D.4849;
+  long unsigned int D.4848;
+  long unsigned int D.4847;
 
   <bb 2>:
   i = 0;
   goto <bb 7>;
 
   <bb 3>:
-  D.4780 = (long unsigned int) i;
-  D.4781 = D.4780 * 8;
-  D.4782 = x1 + D.4781;
-  D.4783 = (double) i;
-  D.4784 = (double) n;
-  D.4785 = D.4783 / D.4784;
-  *D.4782 = D.4785;
-  D.4786 = (long unsigned int) i;
-  D.4787 = D.4786 * 8;
-  D.4788 = x2 + D.4787;
-  D.4789 = (double) i;
-  D.4790 = D.4789 + 1.0e+0;
-  D.4791 = (double) n;
-  D.4792 = D.4790 / D.4791;
-  *D.4788 = D.4792;
-  D.4793 = (long unsigned int) i;
-  D.4794 = D.4793 * 8;
-  D.4795 = y_1 + D.4794;
-  D.4796 = (double) i;
-  D.4797 = D.4796 + 3.0e+0;
-  D.4798 = (double) n;
-  D.4799 = D.4797 / D.4798;
-  *D.4795 = D.4799;
-  D.4800 = (long unsigned int) i;
-  D.4801 = D.4800 * 8;
-  D.4802 = y_2 + D.4801;
-  D.4803 = (double) i;
-  D.4804 = D.4803 + 4.0e+0;
-  D.4805 = (double) n;
-  D.4806 = D.4804 / D.4805;
-  *D.4802 = D.4806;
+  D.4847 = (long unsigned int) i;
+  D.4848 = D.4847 * 8;
+  D.4849 = x1 + D.4848;
+  D.4850 = (double) i;
+  D.4851 = (double) n;
+  D.4852 = D.4850 / D.4851;
+  *D.4849 = D.4852;
+  D.4853 = (long unsigned int) i;
+  D.4854 = D.4853 * 8;
+  D.4855 = x2 + D.4854;
+  D.4856 = (double) i;
+  D.4857 = D.4856 + 1.0e+0;
+  D.4858 = (double) n;
+  D.4859 = D.4857 / D.4858;
+  *D.4855 = D.4859;
+  D.4860 = (long unsigned int) i;
+  D.4861 = D.4860 * 8;
+  D.4862 = y_1 + D.4861;
+  D.4863 = (double) i;
+  D.4864 = D.4863 + 3.0e+0;
+  D.4865 = (double) n;
+  D.4866 = D.4864 / D.4865;
+  *D.4862 = D.4866;
+  D.4867 = (long unsigned int) i;
+  D.4868 = D.4867 * 8;
+  D.4869 = y_2 + D.4868;
+  D.4870 = (double) i;
+  D.4871 = D.4870 + 4.0e+0;
+  D.4872 = (double) n;
+  D.4873 = D.4871 / D.4872;
+  *D.4869 = D.4873;
   j = 0;
   goto <bb 5>;
 
   <bb 4>:
-  D.4807 = (long unsigned int) i;
-  D.4808 = D.4807 * 64000;
-  D.4809 = A + D.4808;
-  D.4810 = (double) i;
-  D.4811 = (double) j;
-  D.4812 = D.4810 * D.4811;
-  D.4813 = D.4812 / 8.0e+3;
-  *D.4809[j] = D.4813;
+  D.4874 = (long unsigned int) i;
+  D.4875 = D.4874 * 64000;
+  D.4876 = A + D.4875;
+  D.4877 = (double) i;
+  D.4878 = (double) j;
+  D.4879 = D.4877 * D.4878;
+  D.4880 = D.4879 / 8.0e+3;
+  *D.4876[j] = D.4880;
   j = j + 1;
 
   <bb 5>:
@@ -112,43 +112,43 @@ init_array (int n, double * x1, double * x2, double * y_1, double * y_2, double[
 
 
 
-;; Function print_array (print_array, funcdef_no=3, decl_uid=4740, cgraph_uid=3, symbol_order=5)
+;; Function print_array (print_array, funcdef_no=3, decl_uid=4813, cgraph_uid=3, symbol_order=5)
 
 print_array (int n, double * x1, double * x2)
 {
   int i;
   struct _IO_FILE * stderr.2;
-  int D.4824;
+  int D.4891;
   struct _IO_FILE * stderr.1;
-  double D.4822;
-  double * D.4821;
-  long unsigned int D.4820;
-  long unsigned int D.4819;
+  double D.4889;
+  double * D.4888;
+  long unsigned int D.4887;
+  long unsigned int D.4886;
   struct _IO_FILE * stderr.0;
-  double D.4817;
-  double * D.4816;
-  long unsigned int D.4815;
-  long unsigned int D.4814;
+  double D.4884;
+  double * D.4883;
+  long unsigned int D.4882;
+  long unsigned int D.4881;
 
   <bb 2>:
   i = 0;
   goto <bb 6>;
 
   <bb 3>:
-  D.4814 = (long unsigned int) i;
-  D.4815 = D.4814 * 8;
-  D.4816 = x1 + D.4815;
-  D.4817 = *D.4816;
+  D.4881 = (long unsigned int) i;
+  D.4882 = D.4881 * 8;
+  D.4883 = x1 + D.4882;
+  D.4884 = *D.4883;
   stderr.0 = stderr;
-  fprintf (stderr.0, "%0.2lf ", D.4817);
-  D.4819 = (long unsigned int) i;
-  D.4820 = D.4819 * 8;
-  D.4821 = x2 + D.4820;
-  D.4822 = *D.4821;
+  fprintf (stderr.0, "%0.2lf ", D.4884);
+  D.4886 = (long unsigned int) i;
+  D.4887 = D.4886 * 8;
+  D.4888 = x2 + D.4887;
+  D.4889 = *D.4888;
   stderr.1 = stderr;
-  fprintf (stderr.1, "%0.2lf ", D.4822);
-  D.4824 = i % 20;
-  if (D.4824 == 0)
+  fprintf (stderr.1, "%0.2lf ", D.4889);
+  D.4891 = i % 20;
+  if (D.4891 == 0)
     goto <bb 4>;
   else
     goto <bb 5>;
@@ -173,82 +173,451 @@ print_array (int n, double * x1, double * x2)
 
 
 
-;; Function kernel_mvt (kernel_mvt, funcdef_no=4, decl_uid=4752, cgraph_uid=4, symbol_order=6)
+;; Function kernel_mvt (kernel_mvt, funcdef_no=4, decl_uid=4825, cgraph_uid=4, symbol_order=6)
 
 
 OMP region tree
 
 bb 2: gimple_omp_parallel
-    bb 12: gimple_omp_single
-    bb 20: GIMPLE_OMP_RETURN
+    bb 18: gimple_omp_single
+        bb 20: gimple_omp_for
+            bb 21: gimple_omp_task
+                bb 22: gimple_omp_for
+                bb 26: GIMPLE_OMP_CONTINUE
+                bb 27: GIMPLE_OMP_RETURN
+            bb 28: GIMPLE_OMP_CONTINUE
+            bb 29: GIMPLE_OMP_RETURN
+        bb 30: GIMPLE_OMP_CONTINUE
+        bb 31: GIMPLE_OMP_RETURN
+    bb 32: GIMPLE_OMP_RETURN
     bb 3: gimple_omp_single
-    bb 11: GIMPLE_OMP_RETURN
-bb 21: GIMPLE_OMP_RETURN
+        bb 5: gimple_omp_for
+            bb 6: gimple_omp_task
+                bb 7: gimple_omp_for
+                bb 11: GIMPLE_OMP_CONTINUE
+                bb 12: GIMPLE_OMP_RETURN
+            bb 13: GIMPLE_OMP_CONTINUE
+            bb 14: GIMPLE_OMP_RETURN
+        bb 15: GIMPLE_OMP_CONTINUE
+        bb 16: GIMPLE_OMP_RETURN
+    bb 17: GIMPLE_OMP_RETURN
+bb 33: GIMPLE_OMP_RETURN
 
-Introduced new external node (__builtin_GOMP_single_start/12).
-Introduced new external node (__builtin_GOMP_barrier/13).
-Merging blocks 2 and 24
-Merging blocks 2 and 22
+Added new low gimple function kernel_mvt._omp_fn.2 to callgraph
+
+;; Function kernel_mvt._omp_fn.2 (kernel_mvt._omp_fn.2, funcdef_no=8, decl_uid=4986, cgraph_uid=10, symbol_order=13)
+
+kernel_mvt._omp_fn.2 (struct  & restrict .omp_data_i)
+{
+  double D.5052;
+  double D.5051;
+  double D.5050;
+  double * D.5049;
+  long unsigned int D.5048;
+  long unsigned int D.5047;
+  double D.5046;
+  double[8000] * D.5045;
+  long unsigned int D.5044;
+  long unsigned int D.5043;
+  double D.5042;
+  double * D.5041;
+  long unsigned int D.5040;
+  long unsigned int D.5039;
+  double * D.5038;
+  long unsigned int D.5037;
+  long unsigned int D.5036;
+  int i;
+  int D.5034;
+  int D.5033;
+  int n.16;
+  int n;
+  double * x2;
+  double * y_2;
+  double[8000] * A;
+  int j;
+  int n.6;
+  long int D.5025;
+  long int D.5024;
+
+  <bb 35>:
+
+  <bb 22>:
+  D.5024 = .omp_data_i->D.4989;
+  D.5025 = .omp_data_i->D.4991;
+  n.6 = .omp_data_i->n.6;
+  j = .omp_data_i->j;
+  A = .omp_data_i->A;
+  y_2 = .omp_data_i->y_2;
+  x2 = .omp_data_i->x2;
+  n = .omp_data_i->n;
+  n.16 = n.6;
+  D.5033 = (int) D.5024;
+  D.5034 = (int) D.5025;
+  i = D.5033;
+
+  <bb 23>:
+  j = 0;
+
+  <bb 25>:
+  if (j < n)
+    goto <bb 24>;
+  else
+    goto <bb 26>;
+
+  <bb 26>:
+  i = i + 1;
+  if (i < D.5034)
+    goto <bb 23>;
+  else
+    goto <bb 27>;
+
+  <bb 27>:
+
+  <bb 28>:
+  return;
+
+  <bb 24>:
+  D.5036 = (long unsigned int) i;
+  D.5037 = D.5036 * 8;
+  D.5038 = x2 + D.5037;
+  D.5039 = (long unsigned int) i;
+  D.5040 = D.5039 * 8;
+  D.5041 = x2 + D.5040;
+  D.5042 = *D.5041;
+  D.5043 = (long unsigned int) j;
+  D.5044 = D.5043 * 64000;
+  D.5045 = A + D.5044;
+  D.5046 = *D.5045[i];
+  D.5047 = (long unsigned int) j;
+  D.5048 = D.5047 * 8;
+  D.5049 = y_2 + D.5048;
+  D.5050 = *D.5049;
+  D.5051 = D.5046 * D.5050;
+  D.5052 = D.5042 + D.5051;
+  *D.5038 = D.5052;
+  j = j + 1;
+  goto <bb 25>;
+
+}
+
+
+
+;; Function kernel_mvt (kernel_mvt, funcdef_no=4, decl_uid=4825, cgraph_uid=4, symbol_order=6)
+
+Added new low gimple function kernel_mvt._omp_fn.1 to callgraph
+
+;; Function kernel_mvt._omp_fn.1 (kernel_mvt._omp_fn.1, funcdef_no=7, decl_uid=4958, cgraph_uid=9, symbol_order=12)
+
+kernel_mvt._omp_fn.1 (struct  & restrict .omp_data_i)
+{
+  double D.5084;
+  double D.5083;
+  double D.5082;
+  double * D.5081;
+  long unsigned int D.5080;
+  long unsigned int D.5079;
+  double D.5078;
+  double[8000] * D.5077;
+  long unsigned int D.5076;
+  long unsigned int D.5075;
+  double D.5074;
+  double * D.5073;
+  long unsigned int D.5072;
+  long unsigned int D.5071;
+  double * D.5070;
+  long unsigned int D.5069;
+  long unsigned int D.5068;
+  int i;
+  int D.5066;
+  int D.5065;
+  int n.13;
+  int n;
+  double * x1;
+  double * y_1;
+  double[8000] * A;
+  int j;
+  int n.4;
+  long int D.5057;
+  long int D.5056;
+
+  <bb 37>:
+
+  <bb 7>:
+  D.5056 = .omp_data_i->D.4961;
+  D.5057 = .omp_data_i->D.4963;
+  n.4 = .omp_data_i->n.4;
+  j = .omp_data_i->j;
+  A = .omp_data_i->A;
+  y_1 = .omp_data_i->y_1;
+  x1 = .omp_data_i->x1;
+  n = .omp_data_i->n;
+  n.13 = n.4;
+  D.5065 = (int) D.5056;
+  D.5066 = (int) D.5057;
+  i = D.5065;
+
+  <bb 8>:
+  j = 0;
+
+  <bb 10>:
+  if (j < n)
+    goto <bb 9>;
+  else
+    goto <bb 11>;
+
+  <bb 11>:
+  i = i + 1;
+  if (i < D.5066)
+    goto <bb 8>;
+  else
+    goto <bb 12>;
+
+  <bb 12>:
+
+  <bb 13>:
+  return;
+
+  <bb 9>:
+  D.5068 = (long unsigned int) i;
+  D.5069 = D.5068 * 8;
+  D.5070 = x1 + D.5069;
+  D.5071 = (long unsigned int) i;
+  D.5072 = D.5071 * 8;
+  D.5073 = x1 + D.5072;
+  D.5074 = *D.5073;
+  D.5075 = (long unsigned int) i;
+  D.5076 = D.5075 * 64000;
+  D.5077 = A + D.5076;
+  D.5078 = *D.5077[j];
+  D.5079 = (long unsigned int) j;
+  D.5080 = D.5079 * 8;
+  D.5081 = y_1 + D.5080;
+  D.5082 = *D.5081;
+  D.5083 = D.5078 * D.5082;
+  D.5084 = D.5074 + D.5083;
+  *D.5070 = D.5084;
+  j = j + 1;
+  goto <bb 10>;
+
+}
+
+
+
+;; Function kernel_mvt (kernel_mvt, funcdef_no=4, decl_uid=4825, cgraph_uid=4, symbol_order=6)
+
+Added new low gimple function kernel_mvt._omp_fn.0 to callgraph
+Introduced new external node (__builtin_GOMP_single_start/14).
+Introduced new external node (__builtin_GOMP_barrier/15).
+Introduced new external node (__builtin_GOMP_taskloop/16).
+
+;; Function kernel_mvt._omp_fn.0 (kernel_mvt._omp_fn.0, funcdef_no=6, decl_uid=4937, cgraph_uid=8, symbol_order=11)
+
+kernel_mvt._omp_fn.0 (struct .omp_data_s.8 & restrict .omp_data_i)
+{
+  int D.5112;
+  int D.5111;
+  int D.5110;
+  int D.5109;
+  long int D.5108;
+  struct  .omp_data_o.14;
+  long int D.5106;
+  long int D.5105;
+  int n.15;
+  int tasks.5;
+  int n.4;
+  long int D.5101;
+  int j;
+  struct  .omp_data_o.17;
+  long int D.5098;
+  long int D.5097;
+  int n.18;
+  int tasks.7;
+  int n.6;
+  _Bool D.5093;
+  _Bool D.5092;
+  int n;
+  double * x1;
+  double * x2;
+  double * y_1;
+  double * y_2;
+  double[8000] * A;
+
+  <bb 39>:
+
+  <bb 3>:
+  A = .omp_data_i->A;
+  y_2 = .omp_data_i->y_2;
+  y_1 = .omp_data_i->y_1;
+  x2 = .omp_data_i->x2;
+  x1 = .omp_data_i->x1;
+  n = .omp_data_i->n;
+
+  <bb 4>:
+  D.5092 = __builtin_GOMP_single_start ();
+  if (D.5092 == 1)
+    goto <bb 5>;
+  else
+    goto <bb 17>;
+
+  <bb 17>:
+  __builtin_GOMP_barrier ();
+
+  <bb 18>:
+
+  <bb 19>:
+  D.5093 = __builtin_GOMP_single_start ();
+  if (D.5093 == 1)
+    goto <bb 20>;
+  else
+    goto <bb 32>;
+
+  <bb 32>:
+
+  <bb 33>:
+  return;
+
+  <bb 20>:
+  n.6 = n;
+  tasks.7 = tasks;
+  n.18 = n.6;
+  D.5097 = 0;
+  D.5098 = (long int) n.18;
+
+  <bb 21>:
+  .omp_data_o.17.n.6 = n.6;
+  .omp_data_o.17.j = j;
+  .omp_data_o.17.A = A;
+  .omp_data_o.17.y_2 = y_2;
+  .omp_data_o.17.x2 = x2;
+  .omp_data_o.17.n = n;
+
+  <bb 36>:
+  D.5101 = (long int) tasks.7;
+  __builtin_GOMP_taskloop (kernel_mvt._omp_fn.2, &.omp_data_o.17, 0B, 56, 8, 1280, D.5101, 0, D.5097, D.5098, 1);
+
+  <bb 29>:
+
+  <bb 30>:
+  .omp_data_o.17 = {CLOBBER};
+
+  <bb 31>:
+  goto <bb 32>;
+
+  <bb 5>:
+  n.4 = n;
+  tasks.5 = tasks;
+  n.15 = n.4;
+  D.5105 = 0;
+  D.5106 = (long int) n.15;
+
+  <bb 6>:
+  .omp_data_o.14.n.4 = n.4;
+  .omp_data_o.14.j = j;
+  .omp_data_o.14.A = A;
+  .omp_data_o.14.y_1 = y_1;
+  .omp_data_o.14.x1 = x1;
+  .omp_data_o.14.n = n;
+
+  <bb 38>:
+  D.5108 = (long int) tasks.5;
+  __builtin_GOMP_taskloop (kernel_mvt._omp_fn.1, &.omp_data_o.14, 0B, 56, 8, 1280, D.5108, 0, D.5105, D.5106, 1);
+
+  <bb 14>:
+
+  <bb 15>:
+  .omp_data_o.14 = {CLOBBER};
+
+  <bb 16>:
+  goto <bb 17>;
+
+}
+
+
+
+;; Function kernel_mvt (kernel_mvt, funcdef_no=4, decl_uid=4825, cgraph_uid=4, symbol_order=6)
+
+Merging blocks 2 and 40
+Merging blocks 2 and 34
 kernel_mvt (int n, double * x1, double * x2, double * y_1, double * y_2, double[8000] * A)
 {
-  unsigned int threads.8;
-  _Bool D.4925;
-  _Bool D.4910;
+  unsigned int threads.20;
+  long int D.5085;
+  int D.5055;
+  int D.5054;
+  long int D.5053;
+  int D.5023;
+  int D.5022;
+  double D.4934;
+  double D.4933;
+  double D.4932;
+  double * D.4931;
+  long unsigned int D.4930;
+  long unsigned int D.4929;
+  double D.4928;
+  double[8000] * D.4927;
+  long unsigned int D.4926;
+  long unsigned int D.4925;
+  double D.4924;
+  double * D.4923;
+  long unsigned int D.4922;
+  long unsigned int D.4921;
+  double * D.4920;
+  long unsigned int D.4919;
+  long unsigned int D.4918;
+  int n.16;
+  int D.4982;
+  int n.18;
+  _Bool D.5020;
+  double D.4914;
+  double D.4913;
+  double D.4912;
+  double * D.4911;
+  long unsigned int D.4910;
+  long unsigned int D.4909;
+  double D.4908;
+  double[8000] * D.4907;
+  long unsigned int D.4906;
+  long unsigned int D.4905;
+  double D.4904;
+  double * D.4903;
+  long unsigned int D.4902;
+  long unsigned int D.4901;
+  double * D.4900;
+  long unsigned int D.4899;
+  long unsigned int D.4898;
+  int n.13;
+  int D.4954;
+  int n.15;
+  _Bool D.5014;
   int j;
   int i;
   int threads.3;
-  struct .omp_data_s.4 .omp_data_o.7;
-  int D.4921;
-  int D.4922;
-  int D.4919;
-  int D.4920;
-  int D.4918;
-  double * D.4917;
-  int D.4916;
-  double[8000] * D.4915;
-  double * D.4914;
-  int D.4913;
-  double * D.4912;
-  int D.4911;
-  int D.4906;
-  int D.4907;
-  int D.4904;
-  int D.4905;
-  int D.4903;
-  double * D.4902;
-  double[8000] * D.4901;
-  int D.4900;
-  double * D.4899;
-  int D.4898;
-  double * D.4897;
-  int D.4896;
+  struct .omp_data_s.8 .omp_data_o.19;
+  struct  .omp_data_o.17;
+  struct  .omp_data_o.14;
+  long int D.4984;
+  long int D.4983;
+  long int D.4956;
+  long int D.4955;
 
   <bb 2>:
   threads.3 = threads;
-  .omp_data_o.7.x1 = x1;
-  .omp_data_o.7.x2 = x2;
-  .omp_data_o.7.y_1 = y_1;
-  .omp_data_o.7.y_2 = y_2;
-  .omp_data_o.7.A = A;
-  .omp_data_o.7.n = n;
-  .omp_data_o.7.i = i;
-  threads.8 = (unsigned int) threads.3;
-  __builtin_GOMP_parallel (kernel_mvt._omp_fn.0, &.omp_data_o.7, threads.8, 0);
-  x1 = .omp_data_o.7.x1;
-  x2 = .omp_data_o.7.x2;
-  y_1 = .omp_data_o.7.y_1;
-  y_2 = .omp_data_o.7.y_2;
-  A = .omp_data_o.7.A;
-  n = .omp_data_o.7.n;
-  i = .omp_data_o.7.i;
-  .omp_data_o.7 = {CLOBBER};
+  .omp_data_o.19.A = A;
+  .omp_data_o.19.y_2 = y_2;
+  .omp_data_o.19.y_1 = y_1;
+  .omp_data_o.19.x2 = x2;
+  .omp_data_o.19.x1 = x1;
+  .omp_data_o.19.n = n;
+  threads.20 = (unsigned int) threads.3;
+  __builtin_GOMP_parallel (kernel_mvt._omp_fn.0, &.omp_data_o.19, threads.20, 0);
+  .omp_data_o.19 = {CLOBBER};
   return;
 
 }
 
 
 
-;; Function main (main, funcdef_no=5, decl_uid=4770, cgraph_uid=5, symbol_order=7)
+;; Function main (main, funcdef_no=5, decl_uid=4837, cgraph_uid=5, symbol_order=7)
 
 main (int argc, char * * argv)
 {
@@ -259,14 +628,14 @@ main (int argc, char * * argv)
   double[8000] * x1;
   double[8000][8000] * A;
   int n;
-  int D.5011;
-  unsigned char D.5008;
-  char * D.5007;
-  int tasks.11;
-  int threads.10;
-  int threads.9;
-  char * D.4999;
-  char * * D.4998;
+  int D.5129;
+  unsigned char D.5126;
+  char * D.5125;
+  int D.5122;
+  int threads.22;
+  int threads.21;
+  char * D.5117;
+  char * * D.5116;
 
   <bb 2>:
   if (argc > 1)
@@ -275,20 +644,20 @@ main (int argc, char * * argv)
     goto <bb 5>;
 
   <bb 3>:
-  D.4998 = argv + 8;
-  D.4999 = *D.4998;
-  valor = atoi (D.4999);
+  D.5116 = argv + 8;
+  D.5117 = *D.5116;
+  valor = atoi (D.5117);
   threads = valor;
-  threads.9 = threads;
-  if (threads.9 > 1)
+  threads.21 = threads;
+  if (threads.21 > 1)
     goto <bb 4>;
   else
     goto <bb 5>;
 
   <bb 4>:
-  threads.10 = threads;
-  tasks.11 = threads.10 / 2;
-  tasks = tasks.11;
+  threads.22 = threads;
+  D.5122 = threads.22 / 2;
+  tasks = D.5122;
 
   <bb 5>:
   n = 8000;
@@ -308,9 +677,9 @@ main (int argc, char * * argv)
     goto <bb 8>;
 
   <bb 6>:
-  D.5007 = *argv;
-  D.5008 = MEM[(const unsigned char * {ref-all})D.5007];
-  if (D.5008 == 0)
+  D.5125 = *argv;
+  D.5126 = MEM[(const unsigned char * {ref-all})D.5125];
+  if (D.5126 == 0)
     goto <bb 7>;
   else
     goto <bb 8>;
@@ -324,10 +693,10 @@ main (int argc, char * * argv)
   free (x2);
   free (y_1);
   free (y_2);
-  D.5011 = 0;
+  D.5129 = 0;
 
 <L8>:
-  return D.5011;
+  return D.5129;
 
 }
 

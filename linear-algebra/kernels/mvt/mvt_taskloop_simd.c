@@ -83,7 +83,7 @@ void kernel_mvt(int n,
   {
    #pragma omp single 
     {
-    #pragma omp taskloop simd num_tasks(tasks)
+    #pragma omp taskloop simd num_tasks(tasks) collapse(2)
       for (i = 0; i < _PB_N; i++)
         for (j = 0; j < _PB_N; j++)
           x1[i] = x1[i] + A[i][j] * y_1[j];
@@ -91,7 +91,7 @@ void kernel_mvt(int n,
 
    #pragma omp single
    {
-    #pragma omp taskloop simd num_tasks(tasks)
+    #pragma omp taskloop simd num_tasks(tasks) collapse(2)
       for (i = 0; i < _PB_N; i++)
         for (j = 0; j < _PB_N; j++)
           x2[i] = x2[i] + A[j][i] * y_2[j];

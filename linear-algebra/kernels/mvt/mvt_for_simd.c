@@ -80,12 +80,12 @@ void kernel_mvt(int n,
 #pragma scop
   #pragma omp parallel num_threads(threads) private(j)
   {
-  	#pragma omp for simd schedule(guided, 128)
+  	#pragma omp for simd schedule(guided, 128) collapse(2)
 	  for (i = 0; i < _PB_N; i++)
 	    for (j = 0; j < _PB_N; j++)
 	      x1[i] = x1[i] + A[i][j] * y_1[j];
 
-	  #pragma omp for simd schedule(guided, 128)
+	  #pragma omp for simd schedule(guided, 128) collapse(2)
 	  for (i = 0; i < _PB_N; i++)
 	    for (j = 0; j < _PB_N; j++)
 	      x2[i] = x2[i] + A[j][i] * y_2[j];

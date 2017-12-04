@@ -83,13 +83,13 @@ if __name__ == "__main__":
     subprocess.call(comando_for.split())
 
     print('[PD360] Compilando o código sequencial + simd...')
-    comando_sequencial_simd = 'gcc -I utilities -I linear-algebra/kernels/mvt utilities/polybench.c -fopenmp -fdump-tree-ompexp-graph linear-algebra/kernels/mvt/mvt_simd.c -DPOLYBENCH_TIME -D%s -o mvt_sequencial_simd -O0' % (
+    comando_sequencial_simd = 'gcc -I utilities -I -S linear-algebra/kernels/mvt utilities/polybench.c -fopenmp -fdump-tree-ompexp-graph linear-algebra/kernels/mvt/mvt_simd.c -DPOLYBENCH_TIME -D%s -o mvt_sequencial_simd -O0' % (
         tamanho_dataset)
     print(comando_sequencial_simd)
     subprocess.call(comando_sequencial_simd.split())
 
     print('[PD360] Compilando o código parallel for + simd...')
-    comando_for_simd = 'gcc -I utilities -I linear-algebra/kernels/mvt utilities/polybench.c -fopenmp -fdump-tree-ompexp-graph linear-algebra/kernels/mvt/mvt_for_simd.c -DPOLYBENCH_TIME -D%s -o mvt_for_simd -O0' % (
+    comando_for_simd = 'gcc -I utilities -I -S linear-algebra/kernels/mvt utilities/polybench.c -fopenmp -fdump-tree-ompexp-graph linear-algebra/kernels/mvt/mvt_for_simd.c -DPOLYBENCH_TIME -D%s -o mvt_for_simd -O0' % (
         tamanho_dataset)
     print(comando_for_simd)
     subprocess.call(comando_for_simd.split())
